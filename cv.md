@@ -1,0 +1,139 @@
+# Portfolio
+* Oksana Kalinina, 29 years, ![avatar](/img/IMG_2301.jpg "avatar")
+* My contacts:
+    + Telegram: @kalininateach,
+    + phone: 8(925)870-05-45,
+    + e-mail: ksan4ik92@gmail.com, 
+    + discord (rs-school): Kalinina Oksana (oksan4ik10)
+* I'm living in Sergiev Posad. I'm a college teacher. I teach students programming and website development.  Work experience is 7 years
+* My softskills:
+    + Python
+    + HTML/CSS
+    + JavaScript
+    + Git/GitHub
+* Example my code:
+        ```
+        let arrResult = [];
+
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+            return array;
+        }
+
+        function renderColoda(){
+
+            //формируем колоду
+            let coloda = [];
+
+            for (let i = 1; i <= 2; i++) {
+
+                for (let j = 1; j<= 8; j++) {
+                    coloda.push(j);
+                }
+            }
+            coloda = shuffle(coloda);
+            //выводим колоду на экран
+            const cards = document.querySelector('.cards');
+            cards.textContent = '';
+
+            coloda.forEach((element,index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.setAttribute('id',index);
+                const span = document.createElement('span');
+                span.textContent = element;
+                card.append(span);
+                cards.append(card);
+            });
+            return cards;
+        }
+
+
+        let cards = renderColoda();
+
+
+            //логика игры
+        const openCard = (item,span)=>{
+            item.style.backgroundColor = 'transparent';
+            span.style.opacity = 1;
+        }
+
+        const closeCard = (arrCard) =>{
+            setTimeout(function(){
+                arrCard.forEach((item)=>{
+                    item.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                    item.querySelector('span').style.opacity = 0;
+                })
+            },200)
+        }
+
+        const resetIdCard = (arrId) =>{
+            const cards = document.querySelectorAll('.card');
+            cards[arrId[0]].setAttribute('id', arrId[0]);
+            cards[arrId[1]].setAttribute('id', arrId[1]);
+        }
+
+        let count = 0,
+        arrCards = [],
+        arrTwoCard = [],
+        arrIdCard = [];
+
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('click',()=>{
+            cards = renderColoda();
+            btn.style.display = 'none';
+            arrResult = [];
+        })
+
+        cards.addEventListener('click',(event)=>{
+            const target = event.target;
+
+            if  ( !target.closest('.card')) return;
+            const card = target.closest('.card');
+            const span = card.querySelector('span');
+            const id = +card.getAttribute('id');
+            if (id === -1) {
+                alert('Выберите другую карту');
+                return;
+            }
+            if (count < 2 ){
+                openCard(card, span);
+                card.setAttribute('id', -1);
+                count++;
+                arrTwoCard.push(span.textContent);
+                arrIdCard.push(id);
+                arrCards.push(card);
+
+            }
+            if (count == 2){
+                count = 0;
+            
+                if (arrTwoCard[0] == arrTwoCard[1]) arrResult.unshift(arrTwoCard);
+
+                else{
+                    resetIdCard(arrIdCard);
+                    closeCard(arrCards);
+                }
+                arrCards = [];
+                arrTwoCard = [];
+                arrIdCard = [];
+
+            }
+            
+            if (arrResult.length === 8){
+                btn.style.display = 'block';
+                
+            }
+
+
+        })
+    ```
+* My research projects:
+    + [Project JS]( "https://github.com/oksan4ik10/diplomGlo")
+    + [Project Python]( "https://github.com/oksan4ik10/bmi/tree/day5")
+    + [Project HTML/CSS/JS]( "https://github.com/oksan4ik10/mySite")
+* My education:
+    + MGUPI (engineer)
+    + Online school Glo Academy (JavaScript)
+* English language level: В1
