@@ -344,3 +344,58 @@ h1{
     letter-spacing: 0.06em;
     color: #545454;
 }
+
+
+/*======donation=========*/
+.donation{
+    background: #F6F6F6;
+}
+.donation__container {
+    padding: 80px 0px 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.donation__image {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+
+.donation__content {
+    display: flex;
+    flex-direction: column;
+}
+.donation__content>*:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.donation__desc {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.donation__card {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #F1CDB3;
+    border-radius: 9px;
+    max-width: 349px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em; 
+    text-align: right;
+    color: #545454;
+    background-image: url('../../assets/icons/credit-card.svg');
+    background-repeat: no-repeat;
+    background-position:left 15px center;
+}
+.donation__text {
+    font-family: 'Arial';
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #B2B2B2;
+}
