@@ -16,7 +16,7 @@ h1{
     max-width: 1200px;
     margin: auto;
     padding: 0px 5px;
-    box-sizing:content-box
+    box-sizing:content-box;
 }
 
 .btn {
@@ -299,3 +299,48 @@ h1{
     background:transparent;
 }
 
+
+/*=====help======*/
+.help {
+}
+.help__container {
+    padding: 80px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__heading {
+    margin-bottom: 60px;
+}
+.help__title {
+    text-align: center;
+}
+
+.help__list {
+    margin: 0px -36px 0px 87px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.help__list>*:not(:last-child){
+    margin-right: 120px;
+}
+.help__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+}
+.help__item:nth-child(6){
+    margin-left: 84px;
+}
+
+.help__icon {
+    margin-bottom: 30px;
+}
+.help__desc {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
