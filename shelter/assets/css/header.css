@@ -1,0 +1,71 @@
+/* =============header=========== */
+
+.header__container {
+    padding-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.logo {
+    text-decoration: none;
+}
+
+.logo__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    margin-bottom: 10px;
+}
+.logo__subtitle {
+    font-family: 'Arial';
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.nav__list {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+}
+.nav__item {
+    border-bottom: 3px solid transparent;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.nav__link{
+    text-decoration: none;
+    font-family: 'Arial';
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+    display: block;
+    
+}
+.nav__item:not(:last-child){
+    margin-right: 35px;
+}
+
+
+.nav__item:hover, .nav__item.active{
+    border-color: #F1CDB3
+}
+.nav__item.active:hover{
+    border-color: transparent;
+}
