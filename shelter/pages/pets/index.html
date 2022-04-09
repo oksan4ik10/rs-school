@@ -4,9 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our pets</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header header-pets">
+        <div class="container header__container header-pets__container">
+            <a href="#" class="logo header__logo">
+                <h1 class="logo__title header-pets__title">Cozy House</h1>
+                <span class="logo__subtitle header-pets__subtitle">Shelter for pets in Boston</span>
+            </a>
+
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item "><a href="#" class="nav__link header-pets__link"> About the shelter</a></li>
+                    <li class="nav__item active"><a href="../pets/index.html" class="nav__link header-pets__link">Our pets</a> </li>
+                    <li class="nav__item"><a href="#help" class="nav__link header-pets__link">Help the shelter</a>  </li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link header-pets__link">Contacts</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pets" id="pets">
+        <div class="pets__container container">
+            <div class="pets__heading">
+                <h3 class="title pets__title">Our friends who <br>
+                    are looking for a house</h3>
+            </div>
+            <div class="pets__slider slider">
+                <button class="slider__btn prev"></button>
+
+                <div class="slider__cards cards">
+                    <a href="#" class="cards__item card">
+                        <div class="card__img">
+                            <img src="../../assets/images/cards/pets-katrine.png" alt="katrine">
+                        </div>
+                        <h4 class="card__title">Katrine</h4>
+                        <button class="btn card__btn">Learn more</button>
+
+                    </a>
+                    <a href="#" class="cards__item card">
+                        <div class="card__img">
+                            <img src="../../assets/images/cards/pets-jennifer.png" alt="Jennifer">
+                        </div>
+                        <h4 class="card__title">Jennifer</h4>
+                        <button class="btn card__btn">Learn more</button>
+
+                    </a>
+                    <a href="#" class="cards__item card">
+                        <div class="card__img">
+                            <img src="../../assets/images/cards/pets-woody.png" alt="woody">
+                        </div>
+                        <h4 class="card__title">Woody</h4>
+                        <button class="btn card__btn">Learn more</button>
+
+                    </a>
+                </div>
+                
+                <button class="slider__btn next"></button>
+
+            </div>
+
+            <a href="../pets/index.html" class="pets__btn btn">Get to know the rest</a>
+        </div>
+    </section>
+
+    <footer class="footer" id="contacts">
+        <div class="container footer__container">
+            <div class="footer__question">
+                <h3 class="title footer__title">For questions and suggestions</h3>
+                <a href="mailto: email@shelter.com" class="footer__item">
+                    <img src="../../assets/icons/footer/icon-email.svg" alt="email" class="footer__icon">
+                    <span class="footer__text">email@shelter.com</span>
+                </a>
+                <a href="tel: +1367456775547" class="footer__item">
+                    <img src="../../assets/icons/footer/icon-phone.svg"" alt="phone" class="footer__icon">
+                    <span class="footer__text">+13 674 567 75 54</span>
+                    
+                </a>
+            </div>
+            <div class="footer__write">
+                <h3 class="title footer__title">We are waiting for your visit</h3>
+                <div class="footer__item">
+                    <img src="../../assets/icons/footer/icon-marker.svg" alt="marker" class="footer__icon">
+                    <span class="footer__text">1 Central Street, Boston (entrance from the store)</span>
+                </div>
+                <div class="footer__item">
+                    <img src="../../assets/icons/footer/icon-marker.svg" alt="marker" class="footer__icon">
+                    <span class="footer__text">18 South Park, London </span>
+                    
+                </div>
+            </div>
+            <div class="footer__image">
+                
+                <img src="../../assets/images/footer-puppy.png" alt="puppy" class="footer__img">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
